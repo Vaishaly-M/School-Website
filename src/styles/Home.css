@@ -1,0 +1,26 @@
+/* src/styles/Home.css */
+
+.home-container {
+    background-color: #f8f9fa;
+  }
+  
+  .carousel-item img {
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  h2 {
+    color: #0056b3;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  button {
+    margin: 10px;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+    transition: 0.3s ease;
+  }
