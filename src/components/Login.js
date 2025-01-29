@@ -18,7 +18,7 @@ function Login() {
             <input type="password" placeholder="Enter your password" required />
           </div>
           <div className="form-links">
-            <a href="/forgot-password">Forgot Password?</a>
+            <Link to="/forgot-password">Forgot Password?</Link>
           </div>
           <button type="submit" className="auth-btn">Login</button>
         </form>
