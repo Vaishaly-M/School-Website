@@ -1,71 +1,96 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import { motion } from 'framer-motion'; // Added for animations
+import { FaCalendarAlt, FaTrophy, FaEnvelope, FaInfoCircle, FaBalanceScale, FaPeopleArrows } from 'react-icons/fa';
 import '../styles/Home.css';
 
 function Home() {
   return (
-    <Container fluid className="home-container">
+    <div className="home-container">
       {/* Hero Section */}
-      <Row className="my-5">
-        <Col>
-          <Carousel>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="/assets/images/event1.jpg"
-                alt="Event 1"
-              />
-              <Carousel.Caption>
-                <h3>School Event 1</h3>
-                <p>Join us for a celebration of excellence in education!</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="/assets/images/event2.jpg"
-                alt="Event 2"
-              />
-              <Carousel.Caption>
-                <h3>School Event 2</h3>
-                <p>Don't miss our annual sports day and festivities!</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
-          <div className="text-center mt-3">
-            <h2>Welcome to [School Name], where excellence begins!</h2>
-            <Button variant="primary" as={Link} to="/about" className="mx-2">
-               About Us
-            </Button>
-            <Button variant="secondary" href="#events" className="mx-2">
-              View Events
-            </Button>
-            <Button variant="info"  as={Link} to="/contact" className="mx-2">
-              Contact Us
-            </Button>
-          </div>
-        </Col>
-      </Row>
+      <section className="hero-section" style={{ backgroundImage: "url('/assets/images/hero-bg.jpg')" }}>
+        <div className="hero-overlay">
+          <Container>
+            <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+              Welcome to [Your School Name]
+            </motion.h1>
+            <motion.p className="hero-subtext" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }}>
+              Empowering young minds with knowledge, creativity, and innovation.
+            </motion.p>
+            <div className="hero-buttons">
+              <Link to="/about">
+                <Button variant="success" size="lg">Discover More</Button>
+              </Link>
+              <Link to="/contact">
+                <Button variant="light" size="lg" className="ml-3">Contact Us</Button>
+              </Link>
+            </div>
+          </Container>
+        </div>
+      </section>
 
-      {/* Login/Register Links */}
-      <Row className="text-center my-5">
-        <Col>
-          <h3>Welcome to Our Platform!</h3>
-          <p>Access your account or create one below:</p>
-          <Link to="/login">
-            <Button variant="primary" className="m-2">
-              Login
-            </Button>
+      {/* Information Cards */}
+      <Container className="info-section">
+        <Row>
+          {[
+            { icon: <FaCalendarAlt />, title: "Upcoming Events", text: "Don't miss out on our exciting school programs and activities.", link: "/events", variant: "outline-primary" },
+            { icon: <FaTrophy />, title: "Achievements", text: "Celebrating excellence in academics, sports, and arts.", link: "/achievements", variant: "outline-success" },
+            { icon: <FaInfoCircle />, title: "About Us", text: "We aim to create future leaders with knowledge and ethics.", link: "/about", variant: "outline-info" },
+            { icon: <FaEnvelope />, title: "Contact Us", text: "Have questions? We're here to help you.", link: "/contact", variant: "outline-dark" }
+          ].map((card, index) => (
+            <Col md={3} key={index} className="info-card">
+              <motion.div whileHover={{ scale: 1.05 }}>
+                {card.icon}
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
+                <Link to={card.link}>
+                  <Button variant={card.variant}>{card.title === "Achievements" ? "See More" : "Learn More"}</Button>
+                </Link>
+              </motion.div>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+
+      {/* Our Values Section */}
+      <section className="values-section">
+        <Container>
+          <h2 className="section-title">Our Values</h2>
+          <Row className="justify-content-center">
+            {[
+              { icon: <FaBalanceScale />, title: "Integrity", text: "We uphold honesty, fairness, and transparency in all our actions." },
+              { icon: <FaTrophy />, title: "Excellence", text: "We strive for excellence in everything we do, from academics to extracurriculars." },
+              { icon: <FaPeopleArrows />, title: "Community", text: "We foster a spirit of collaboration, unity, and support within our school." }
+            ].map((value, index) => (
+              <Col md={4} key={index} className="value-card">
+                <motion.div whileHover={{ scale: 1.05 }}>
+                  <div className="value-icon">{value.icon}</div>
+                  <h4>{value.title}</h4>
+                  <p>{value.text}</p>
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="cta-section">
+        <Container className="text-center">
+          <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+            Be a Part of Our Community!
+          </motion.h2>
+          <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }}>
+            Join our school and embark on a journey of learning and success.
+          </motion.p>
+          <Link to="/admissions">
+            <Button variant="warning" size="lg">Learn More</Button>
           </Link>
-          <Link to="/register">
-            <Button variant="secondary" className="m-2">
-              Register
-            </Button>
-          </Link>
-        </Col>
-      </Row>
-    </Container>
+        </Container>
+      </section>
+    </div>
   );
 }
 

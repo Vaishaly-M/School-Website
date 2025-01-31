@@ -1,26 +1,190 @@
-/* src/styles/Home.css */
-
+/* General Styles */
 .home-container {
-    background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 60px;
+  border-radius: 8px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffc107;
+}
+
+.hero-subtext {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+.hero-buttons .btn {
+  font-size: 1.2rem;
+  padding: 12px 24px;
+}
+
+.hero-buttons .btn-light {
+  margin-left: 10px;
+}
+
+/* Info Section */
+.info-section {
+  margin: 50px 0;
+}
+
+.info-card {
+  text-align: center;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  background: #e9ecef;
+}
+
+.info-icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+/* Highlights Section */
+.highlights-section {
+  background: #f1f1f1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #007bff;
+}
+
+.highlight-card {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Our Values Section */
+.values-section {
+  background: #f8f9fa;
+  padding: 40px 0; /* Reduced padding to make it shorter */
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.value-card {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  margin: 10px 0; /* Adjust margins for better alignment */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.value-icon {
+  background: #007bff;
+  color: #fff;
+  width: 50px; /* Slightly smaller icon size */
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px; /* Adjusted spacing */
+  font-size: 2rem; /* Slightly smaller font size */
+}
+
+.value-card h4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px; /* Reduced margin for shorter container */
+}
+
+.value-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  /* Stacking the value cards vertically on smaller screens */
+  .value-card {
+    margin: 15px 0;
+    flex: unset;
+    height: auto; /* Let the height adjust automatically */
   }
-  
-  .carousel-item img {
-    height: 400px;
-    object-fit: cover;
+
+  /* Centering value cards */
+  .values-section .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  h2 {
-    color: #0056b3;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  button {
-    margin: 10px;
-  }
-  
-  button:hover {
-    opacity: 0.9;
-    transition: 0.3s ease;
-  }
+}
+
+/* Call to Action Section */
+.cta-section {
+  background: #007bff;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+button {
+  transition: 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.85;
+}

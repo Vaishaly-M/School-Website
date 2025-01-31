@@ -5,6 +5,11 @@ import Register from './pages/Register';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import UpcomingEvents from './pages/UpcomingEvents';
+import Achievements from './pages/Achievements';
 
 function App() {
   return (
@@ -15,6 +20,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/events" element={<UpcomingEvents />} />
+        <Route path="/achievements" element={<Achievements />} />
       </Routes>
     </Router>
   );

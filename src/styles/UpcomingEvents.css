@@ -1,0 +1,58 @@
+.upcoming-events-container {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .section-icon {
+    font-size: 2.5rem;
+    color: #0056b3;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #0056b3;
+    margin-top: 10px;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .custom-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .custom-card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .event-date {
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+    margin-top: 5px;
+  }
