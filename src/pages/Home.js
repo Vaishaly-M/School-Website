@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
-import { Container, Row, Col, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion'; // Added for animations
 import { FaCalendarAlt, FaTrophy, FaEnvelope, FaInfoCircle, FaBalanceScale, FaPeopleArrows } from 'react-icons/fa';
 import '../styles/Home.css';

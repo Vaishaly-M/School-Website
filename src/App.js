@@ -5,9 +5,6 @@ import Register from './pages/Register';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
 import UpcomingEvents from './pages/UpcomingEvents';
 import Achievements from './pages/Achievements';
 
