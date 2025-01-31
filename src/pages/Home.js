@@ -35,13 +35,13 @@ function Home() {
           </Carousel>
           <div className="text-center mt-3">
             <h2>Welcome to [School Name], where excellence begins!</h2>
-            <Button variant="primary" href="#about" className="mx-2">
-              Learn More
+            <Button variant="primary" as={Link} to="/about" className="mx-2">
+               About Us
             </Button>
             <Button variant="secondary" href="#events" className="mx-2">
               View Events
             </Button>
-            <Button variant="info" href="#contact" className="mx-2">
+            <Button variant="info"  as={Link} to="/contact" className="mx-2">
               Contact Us
             </Button>
           </div>
