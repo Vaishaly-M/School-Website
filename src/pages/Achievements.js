@@ -1,7 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import Navbar from "../components/Navbar"; // Importing Navbar component
 import '../styles/Achievements.css';
+import Footer from "../components/Footer";
 
 const achievements = [
   { 
@@ -50,46 +52,50 @@ const achievements = [
 
 function Achievements() {
   return (
-    <motion.div 
-      className="achievements-page"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
-    >
-      <div className="achievements-header">
-        <h2>Our Proud Achievements</h2>
-        <p>Recognizing the outstanding accomplishments of our students.</p>
-      </div>
-      <div
-        className="achievements-bg"
-        style={{
-          backgroundImage: 'url(/assets/images/students-bg.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      ></div>
-      <Container>
-        <Row className="justify-content-center g-4">
-          {achievements.map((achievement, index) => (
-            <Col md={4} key={index}>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Card className="achievement-card">
-                  <div className="achievement-icon">{achievement.icon}</div>
-                  <Card.Body>
-                    <Card.Title>{achievement.title}</Card.Title>
-                    <Card.Text>{achievement.description}</Card.Text>
-                    <Card.Footer className="text-muted">{achievement.group}</Card.Footer>
-                  </Card.Body>
-                </Card>
-              </motion.div>
-            </Col>
-          ))}
-        </Row>
-        <div className="achievements-cta">
-          <Button variant="primary">Learn More</Button>
+    <>
+      <Navbar /> 
+      <motion.div 
+        className="achievements-page"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
+        <div className="achievements-header">
+          <h2>Our Proud Achievements</h2>
+          <p>Recognizing the outstanding accomplishments of our students.</p>
         </div>
-      </Container>
-    </motion.div>
+        <div
+          className="achievements-bg"
+          style={{
+            backgroundImage: 'url(/assets/images/students-bg.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        ></div>
+        <Container>
+          <Row className="justify-content-center g-4">
+            {achievements.map((achievement, index) => (
+              <Col md={4} key={index}>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Card className="achievement-card">
+                    <div className="achievement-icon">{achievement.icon}</div>
+                    <Card.Body>
+                      <Card.Title>{achievement.title}</Card.Title>
+                      <Card.Text>{achievement.description}</Card.Text>
+                      <Card.Footer className="text-muted">{achievement.group}</Card.Footer>
+                    </Card.Body>
+                  </Card>
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
+          <div className="achievements-cta">
+            <Button variant="primary">Learn More</Button>
+          </div>
+        </Container>
+      </motion.div>
+      <Footer />
+    </>
   );
 }
 

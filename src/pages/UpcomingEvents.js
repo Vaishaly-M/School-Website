@@ -1,7 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaNewspaper, FaCalendarAlt } from "react-icons/fa"; // Import icons
+import Navbar from "../components/Navbar"; // Import Navbar component
 import "../styles/UpcomingEvents.css";
+import Footer from "../components/Footer";
 
 // Event Data
 const events = [
@@ -52,56 +54,60 @@ const news = [
 
 function UpcomingEvents() {
   return (
-    <Container className="upcoming-events-container">
-      {/* Events Section */}
-      <Row>
-        <Col className="section-heading">
-          <FaCalendarAlt className="section-icon" />
-          <h2 className="section-title">Upcoming Events</h2>
-          <p className="section-subtitle">
-            Stay informed about our school's exciting upcoming events.
-          </p>
-        </Col>
-      </Row>
-      <Row className="card-container">
-        {events.map((event, index) => (
-          <Col md={4} key={index} className="mb-4">
-            <Card className="custom-card">
-              <Card.Img variant="top" src={event.image} />
-              <Card.Body>
-                <Card.Title>{event.title}</Card.Title>
-                <Card.Subtitle className="event-date">{event.date}</Card.Subtitle>
-                <Card.Text>{event.description}</Card.Text>
-              </Card.Body>
-            </Card>
+    <>
+      <Navbar /> {/* Adding Navbar here */}
+      <Container className="upcoming-events-container">
+        {/* Events Section */}
+        <Row>
+          <Col className="section-heading">
+            <FaCalendarAlt className="section-icon" />
+            <h2 className="section-title">Upcoming Events</h2>
+            <p className="section-subtitle">
+              Stay informed about our school's exciting upcoming events.
+            </p>
           </Col>
-        ))}
-      </Row>
+        </Row>
+        <Row className="card-container">
+          {events.map((event, index) => (
+            <Col md={4} key={index} className="mb-4">
+              <Card className="custom-card">
+                <Card.Img variant="top" src={event.image} />
+                <Card.Body>
+                  <Card.Title>{event.title}</Card.Title>
+                  <Card.Subtitle className="event-date">{event.date}</Card.Subtitle>
+                  <Card.Text>{event.description}</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
 
-      {/* News Section */}
-      <Row>
-        <Col className="section-heading">
-          <FaNewspaper className="section-icon" />
-          <h2 className="section-title">Latest News</h2>
-          <p className="section-subtitle">
-            Catch up on the latest news and announcements from our school.
-          </p>
-        </Col>
-      </Row>
-      <Row className="card-container">
-        {news.map((item, index) => (
-          <Col md={4} key={index} className="mb-4">
-            <Card className="custom-card">
-              <Card.Img variant="top" src={item.image} />
-              <Card.Body>
-                <Card.Title>{item.title}</Card.Title>
-                <Card.Text>{item.description}</Card.Text>
-              </Card.Body>
-            </Card>
+        {/* News Section */}
+        <Row>
+          <Col className="section-heading">
+            <FaNewspaper className="section-icon" />
+            <h2 className="section-title">Latest News</h2>
+            <p className="section-subtitle">
+              Catch up on the latest news and announcements from our school.
+            </p>
           </Col>
-        ))}
-      </Row>
-    </Container>
+        </Row>
+        <Row className="card-container">
+          {news.map((item, index) => (
+            <Col md={4} key={index} className="mb-4">
+              <Card className="custom-card">
+                <Card.Img variant="top" src={item.image} />
+                <Card.Body>
+                  <Card.Title>{item.title}</Card.Title>
+                  <Card.Text>{item.description}</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+      <Footer />
+    </>
   );
 }
 

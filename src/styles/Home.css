@@ -92,7 +92,7 @@
 /* Our Values Section */
 .values-section {
   background: #f8f9fa;
-  padding: 40px 0; /* Reduced padding to make it shorter */
+  padding: 20px 0; /* Reduced padding to make it shorter */
   text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -115,6 +115,12 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease-in-out;
+}
+
+.values-section .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Adjust the gap as needed */
 }
 
 .value-card:hover {

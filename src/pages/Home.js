@@ -4,6 +4,7 @@ import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
 import { motion } from 'framer-motion'; // Added for animations
 import { FaCalendarAlt, FaTrophy, FaEnvelope, FaInfoCircle, FaBalanceScale, FaPeopleArrows } from 'react-icons/fa';
 import '../styles/Home.css';
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -13,15 +14,12 @@ function Home() {
         <div className="hero-overlay">
           <Container>
             <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-              Welcome to [Your School Name]
+              Welcome to R/Nivi/Kahawatta Muslim Maha Vidyala
             </motion.h1>
             <motion.p className="hero-subtext" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }}>
               Empowering young minds with knowledge, creativity, and innovation.
             </motion.p>
             <div className="hero-buttons">
-              <Link to="/about">
-                <Button variant="success" size="lg">Discover More</Button>
-              </Link>
               <Link to="/contact">
                 <Button variant="light" size="lg" className="ml-3">Contact Us</Button>
               </Link>
@@ -74,22 +72,9 @@ function Home() {
           </Row>
         </Container>
       </section>
-
-      {/* Call to Action Section */}
-      <section className="cta-section">
-        <Container className="text-center">
-          <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-            Be a Part of Our Community!
-          </motion.h2>
-          <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }}>
-            Join our school and embark on a journey of learning and success.
-          </motion.p>
-          <Link to="/admissions">
-            <Button variant="warning" size="lg">Learn More</Button>
-          </Link>
-        </Container>
-      </section>
+      <Footer /> 
     </div>
+    
   );
 }
 
