@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion'; // Added for animations
 import { FaCalendarAlt, FaTrophy, FaPhone, FaEnvelope, FaInfoCircle, FaBalanceScale, FaPeopleArrows } from 'react-icons/fa';
 import '../styles/Home.css';
@@ -15,10 +15,10 @@ function Home() {
         <span><FaEnvelope className="icon" /> example@school.com</span>
       </div>
       <div className="sup-button">
-        <Link to="/donation">
-          <button className="support-btn">Support</button>
-         </Link>
-      </div>
+          <Link to="/supportus">
+            <button className="support-btn">Support</button>
+          </Link>
+        </div>
     </nav>
       {/* Hero Section */}
       <section className="hero-section" style={{ backgroundImage: "url('/assets/images/hero-bg.jpg')" }}>
