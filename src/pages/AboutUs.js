@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Card, ListGroup, Image } from "react-bootstrap";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import "../styles/AboutUs.css";
 
 const AboutUs = () => {
   return (
@@ -33,8 +34,8 @@ const AboutUs = () => {
                 <h4>Vision</h4>
                 <p>
                   Our vision is to provide an inclusive, innovative, and
-                  enriching environment where students grow and thrive academically,
-                  emotionally, and socially.
+                  enriching environment where students grow and thrive
+                  academically, emotionally, and socially.
                 </p>
               </Col>
               <Col md={6}>
@@ -42,8 +43,8 @@ const AboutUs = () => {
                 <p>
                   Our mission is to foster a passion for learning through
                   creativity, innovation, and academic excellence. We aim to
-                  develop responsible global citizens who are equipped to face the
-                  challenges of the future.
+                  develop responsible global citizens who are equipped to face
+                  the challenges of the future.
                 </p>
               </Col>
             </Row>
@@ -53,12 +54,15 @@ const AboutUs = () => {
         {/* History Section */}
         <Row className="my-5">
           <Col className="history-section">
-            <h2 className="text-center">History of R/Nivi/Kahawatta Muslim Maha Vidyala</h2>
+            <h2 className="text-center">
+              History of R/Nivi/Kahawatta Muslim Maha Vidyala
+            </h2>
             <p>
-              Established in [Year], R/Nivi/Kahawatta Muslim Maha Vidyala has been a beacon of
-              educational excellence. Over the years, we have grown from a small
-              local institution into a prominent school in the region. Our
-              commitment to nurturing young minds continues to drive us forward.
+              Established in [Year], R/Nivi/Kahawatta Muslim Maha Vidyala has
+              been a beacon of educational excellence. Over the years, we have
+              grown from a small local institution into a prominent school in
+              the region. Our commitment to nurturing young minds continues to
+              drive us forward.
             </p>
           </Col>
         </Row>
