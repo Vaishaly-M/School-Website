@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
+import Donation from './pages/Donation';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
 import UpcomingEvents from './pages/UpcomingEvents';
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/navbar" element={<Navbar />} />
+        <Route path="/donation" element={<Donation />} />
         <Route path="/footer" element={<Footer />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

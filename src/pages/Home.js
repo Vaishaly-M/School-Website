@@ -14,9 +14,10 @@ function Home() {
         <span><FaPhone className="icon" /> +94 77 123 4567</span>
         <span><FaEnvelope className="icon" /> example@school.com</span>
       </div>
-      <div className="auth-buttons">
-        <button className="login-btn">Login</button>
-        <button className="register-btn">Register</button>
+      <div className="sup-button">
+        <Link to="/donation">
+          <button className="support-btn">Support</button>
+         </Link>
       </div>
     </nav>
       {/* Hero Section */}
