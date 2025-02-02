@@ -12,7 +12,7 @@ const Navbar = () => {
                 <span>R/Nivi/Kahawatta Muslim Maha Vidyala</span>
             </div>
              <ul className={menuOpen ? "nav-links active" : "nav-links"}>
-                <li><Link to="/home">Home</Link></li>
+                <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About Us</Link></li>
                 <li><Link to="/achievements">Achievements</Link></li>
                 <li><Link to="/events">Events & News</Link></li>

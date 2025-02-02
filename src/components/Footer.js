@@ -1,9 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect }  from "react";
+import { Link, useLocation } from "react-router-dom";
 import '../styles/Footer.css';
 import { FaFacebook, FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Footer = () => {
+  const { pathname } = useLocation(); // Detect route changes
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top when pathname changes
+  }, [pathname]);
+
   return (
     <footer className="footer">
       <div className="footer-container">

@@ -2,13 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
 import { motion } from 'framer-motion'; // Added for animations
-import { FaCalendarAlt, FaTrophy, FaEnvelope, FaInfoCircle, FaBalanceScale, FaPeopleArrows } from 'react-icons/fa';
+import { FaCalendarAlt, FaTrophy, FaPhone, FaEnvelope, FaInfoCircle, FaBalanceScale, FaPeopleArrows } from 'react-icons/fa';
 import '../styles/Home.css';
 import Footer from "../components/Footer";
 
 function Home() {
   return (
     <div className="home-container">
+      <nav className="home-nav">
+      <div className="contact-info">
+        <span><FaPhone className="icon" /> +94 77 123 4567</span>
+        <span><FaEnvelope className="icon" /> example@school.com</span>
+      </div>
+      <div className="auth-buttons">
+        <button className="login-btn">Login</button>
+        <button className="register-btn">Register</button>
+      </div>
+    </nav>
       {/* Hero Section */}
       <section className="hero-section" style={{ backgroundImage: "url('/assets/images/hero-bg.jpg')" }}>
         <div className="hero-overlay">
