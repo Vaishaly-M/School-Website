@@ -1,0 +1,151 @@
+.support-page {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 60px 20px;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  /* Support Impact Section */
+  .support-impact-section {
+    padding: 50px 0;
+    text-align: center;
+    max-width: 1200px;  /* Set a max width */
+    margin: 0 auto;  /* Center align */
+    width: 90%;  /* Responsive width */
+  }
+  
+  /* Support Card */
+  .support-card {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin: 20px auto;  /* Ensure spacing */
+    width: 80%;  /* Set width */
+    max-width: 800px;  /* Limit width for readability */
+  }
+  
+  /* Impact Row */
+  .impact-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;  /* Set max width */
+    margin: 0 auto;  /* Center align */
+    width: 90%;  /* Responsive width */
+  }
+  
+  /* Impact Card */
+  .impact-card {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin: 10px;
+    width: 22%;  /* Set a fixed width */
+    min-width: 250px;  /* Ensure responsiveness */
+  }
+  
+  .impact-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .impact-icon {
+    font-size: 40px;
+    color: #28a745;
+    margin-bottom: 10px;
+  }
+  
+  .impact-card h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Why Your Support Matters Section */
+  .why-your-support-matters-section {
+    display: flex;  /* Flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;  /* Allows wrapping of boxes */
+    padding: 50px 0;
+    min-height: 500px;  /* Ensure it takes full height */
+    text-align: center;
+  }
+  
+  .why-your-support-matters-card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    width: 22%;  /* Fixed width */
+    min-width: 250px;  /* Ensure responsiveness */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .why-your-support-matters-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .why-your-support-matters-card h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .why-your-support-matters-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  /* Donate Now Section */
+  .donate-now-section {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .donate-btn {
+    background-color: #ffc107;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .donate-btn:hover {
+    background: #ff9800;
+  }

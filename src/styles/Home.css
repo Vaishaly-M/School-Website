@@ -29,25 +29,25 @@
   font-size: 16px;
 }
 
-/* Right-side Auth Buttons */
-.auth-buttons {
+/* Right-side support Buttons */
+.sup-button {
   display: flex;
   gap: 10px;
 }
 
-.login-btn , .register-btn {
+.login-btn {
   padding: 8px 16px;
   border: 2px solid white;
   background-color: white;
   cursor: pointer;
   border-radius: 40px;
-  color:#020263;
+  color: black;
   font-size: 14px;
   font-weight: bold;
   transition: 0.3s ease-in-out;
 }
 
-/* .register-btn {
+.register-btn {
   padding: 8px 16px;
   border: 2px solid white;
   background-color: white;
@@ -63,7 +63,6 @@
   background-color: #020263;
   color: white;
 }
-
 
 .btn:hover {
   color: #7397bd; /* Change text color to blue on hover */
