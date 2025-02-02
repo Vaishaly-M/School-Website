@@ -9,6 +9,7 @@ import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
 import UpcomingEvents from './pages/UpcomingEvents';
 import Achievements from './pages/Achievements';
+import SupportUs from "./pages/SupportUs";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/events" element={<UpcomingEvents />} />
         <Route path="/achievements" element={<Achievements />} />
+        <Route path="/supportus" element={<SupportUs />} />
       </Routes>
     </Router>
   );

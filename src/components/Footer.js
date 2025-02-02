@@ -46,7 +46,7 @@ const Footer = () => {
           <p><FaPhone className="footer-icon" /> +94 71 234 5678</p>
           <p><FaEnvelope className="footer-icon" /> contact@ourschool.com</p>
           <p>
-            <a href="https://www.facebook.com/schoolpage" target="_blank" rel="noopener noreferrer" className="facebook-link">
+            <a href="https://www.facebook.com/share/15vJnCKbD8/" target="_blank" rel="noopener noreferrer" className="facebook-link">
               <FaFacebook className="footer-icon" /> Follow us on Facebook
             </a>
           </p>
