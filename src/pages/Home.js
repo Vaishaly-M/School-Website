@@ -1,16 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Row, Col, Button, Carousel } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { motion } from "framer-motion"; // Added for animations
-import {
-  FaCalendarAlt,
-  FaTrophy,
-  FaPhone,
-  FaEnvelope,
-  FaInfoCircle,
-  FaBalanceScale,
-  FaPeopleArrows,
-} from "react-icons/fa";
+import { FaCalendarAlt, FaTrophy, FaPhone, FaEnvelope, FaInfoCircle, FaBalanceScale, FaPeopleArrows,} from "react-icons/fa";
 import "../styles/Home.css";
 import Footer from "../components/Footer";
 
@@ -26,9 +18,12 @@ function Home() {
             <FaEnvelope className="icon" /> example@school.com
           </span>
         </div>
-        <div className="auth-buttons">
-          <button className="login-btn">Login</button>
-          <button className="register-btn">Register</button>
+        <div className="sup-buttons">
+        <div className="sup-button">
+          <Link to="/supportus">
+            <button className="support-btn">Support US</button>
+          </Link>
+        </div>
         </div>
       </nav>
       {/* Hero Section */}

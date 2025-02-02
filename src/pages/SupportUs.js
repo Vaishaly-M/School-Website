@@ -23,19 +23,6 @@ function SupportUs() {
 
       <div className="support-page">
         
-        {/* Hero Section */}
-        <section className="hero-section" style={{ backgroundImage: "url('/assets/images/support-hero.jpg')" }}>
-          <div className="hero-overlay">
-            <Container>
-              <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-                Empower the Future – Support Our Students Today!
-              </motion.h1>
-              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }}>
-                Your generosity fuels education, improves facilities, and provides scholarships for underprivileged students.
-              </motion.p>
-            </Container>
-          </div>
-        </section>
 
         {/* Support and Impact Section */}
         <section className="support-impact-section">
@@ -58,6 +45,20 @@ function SupportUs() {
                 </Col>
               </Row>
             ))}
+
+            {/* Hero Section */}
+        <section className="hero-section" style={{ backgroundImage: "url('/assets/images/support-hero.jpg')" }}>
+          <div className="hero-overlay">
+            <Container>
+              <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+                Empower the Future – Support Our Students Today!
+              </motion.h1>
+              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }}>
+                Your generosity fuels education, improves facilities, and provides scholarships for underprivileged students.
+              </motion.p>
+            </Container>
+          </div>
+        </section>
 
             <h2 className="section-title">Why Your Support Matters</h2>
             <Row className="impact-row">
@@ -100,3 +101,5 @@ function SupportUs() {
 }
 
 export default SupportUs;
+
+
